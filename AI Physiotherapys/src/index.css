@@ -1,0 +1,338 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-50: #eef7ff;
+  --color-primary-100: #d9edff;
+  --color-primary-200: #bce0ff;
+  --color-primary-300: #8ecdff;
+  --color-primary-400: #59b0ff;
+  --color-primary-500: #338dff;
+  --color-primary-600: #1b6ef5;
+  --color-primary-700: #1458e1;
+  --color-primary-800: #1747b6;
+  --color-primary-900: #193f8f;
+  --color-primary-950: #142857;
+
+  --color-accent-50: #edfcf5;
+  --color-accent-100: #d3f8e5;
+  --color-accent-200: #aaf0d0;
+  --color-accent-300: #73e2b5;
+  --color-accent-400: #3acd95;
+  --color-accent-500: #17b37c;
+  --color-accent-600: #0b9164;
+  --color-accent-700: #097452;
+  --color-accent-800: #0a5c42;
+  --color-accent-900: #094b37;
+  --color-accent-950: #042a20;
+
+  --color-danger-50: #fff1f1;
+  --color-danger-100: #ffe0e0;
+  --color-danger-200: #ffc7c7;
+  --color-danger-300: #ffa0a0;
+  --color-danger-400: #ff6868;
+  --color-danger-500: #f83b3b;
+  --color-danger-600: #e51d1d;
+  --color-danger-700: #c11414;
+  --color-danger-800: #a01414;
+  --color-danger-900: #841818;
+  --color-danger-950: #480707;
+
+  --color-warn-50: #fffbeb;
+  --color-warn-100: #fff3c6;
+  --color-warn-200: #ffe588;
+  --color-warn-300: #ffd24a;
+  --color-warn-400: #ffbe20;
+  --color-warn-500: #f99b07;
+  --color-warn-600: #dd7302;
+  --color-warn-700: #b75006;
+  --color-warn-800: #943d0c;
+  --color-warn-900: #7a330d;
+  --color-warn-950: #461902;
+
+  /* Dark Theme Default */
+  --color-surface-50: #f8fafc;
+  --color-surface-100: #f1f5f9;
+  --color-surface-200: #e2e8f0;
+  --color-surface-300: #cbd5e1;
+  --color-surface-400: #94a3b8;
+  --color-surface-500: #64748b;
+  --color-surface-600: #475569;
+  --color-surface-700: #334155;
+  --color-surface-800: #1e293b;
+  --color-surface-900: #0f172a;
+  --color-surface-950: #020617;
+
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+}
+
+[data-theme="light"] {
+  /* Light Theme Overrides */
+  --color-surface-50: #ffffff;
+  --color-surface-100: #f8fafc;
+  --color-surface-200: #f1f5f9;
+  --color-surface-300: #e2e8f0;
+  --color-surface-400: #cbd5e1;
+  --color-surface-500: #94a3b8;
+  --color-surface-600: #64748b;
+  --color-surface-700: #475569;
+  --color-surface-800: #334155;
+  --color-surface-900: #1e293b;
+  --color-surface-950: #f8fafc;
+  /* Main background becomes light */
+}
+
+/* Base Styles with Transition */
+body {
+  background-color: var(--color-surface-950);
+  color: var(--color-surface-100);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light Theme Specific Adjustments */
+[data-theme="light"] body {
+  color: var(--color-surface-900);
+}
+
+[data-theme="light"] .card,
+[data-theme="light"] .card-hover,
+[data-theme="light"] .glass {
+  background: rgba(255, 255, 255, 0.7);
+  border-color: rgba(203, 213, 225, 0.6);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+[data-theme="light"] .card-hover:hover {
+  border-color: var(--color-primary-400);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 10px 15px -3px rgba(51, 141, 255, 0.15);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+[data-theme="light"] .btn-secondary {
+  background: white;
+  color: var(--color-surface-700);
+  border-color: var(--color-surface-300);
+}
+
+[data-theme="light"] .btn-secondary:hover {
+  background: var(--color-surface-50);
+  border-color: var(--color-surface-400);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Card styles */
+.card {
+  background: rgba(30, 41, 59, 0.6);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(51, 65, 85, 0.5);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.card-hover {
+  background: rgba(30, 41, 59, 0.6);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(51, 65, 85, 0.5);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.card-hover:hover {
+  border-color: rgba(51, 141, 255, 0.4);
+  box-shadow: 0 20px 25px -5px rgba(51, 141, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Button styles */
+.btn-primary {
+  background: linear-gradient(to right, var(--color-primary-600), var(--color-primary-500));
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  border: none;
+  box-shadow: 0 10px 15px -3px rgba(51, 141, 255, 0.25);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 10px 15px -3px rgba(51, 141, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-secondary {
+  background: rgba(51, 65, 85, 0.8);
+  color: var(--color-surface-200);
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(71, 85, 105, 0.5);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  background: rgba(71, 85, 105, 0.8);
+  border-color: rgba(100, 116, 139, 0.5);
+}
+
+.btn-danger {
+  background: linear-gradient(to right, var(--color-danger-600), var(--color-danger-500));
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  border: none;
+  box-shadow: 0 10px 15px -3px rgba(248, 59, 59, 0.25);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-danger:hover {
+  box-shadow: 0 10px 15px -3px rgba(248, 59, 59, 0.4);
+}
+
+/* Badge styles */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.badge-success {
+  background: rgba(23, 179, 124, 0.2);
+  color: var(--color-accent-400);
+  border: 1px solid rgba(23, 179, 124, 0.3);
+}
+
+.badge-warning {
+  background: rgba(249, 155, 7, 0.2);
+  color: var(--color-warn-400);
+  border: 1px solid rgba(249, 155, 7, 0.3);
+}
+
+.badge-danger {
+  background: rgba(248, 59, 59, 0.2);
+  color: var(--color-danger-400);
+  border: 1px solid rgba(248, 59, 59, 0.3);
+}
+
+.badge-info {
+  background: rgba(51, 141, 255, 0.2);
+  color: var(--color-primary-400);
+  border: 1px solid rgba(51, 141, 255, 0.3);
+}
+
+/* Glass effect */
+.glass {
+  background: rgba(30, 41, 59, 0.4);
+  backdrop-filter: blur(24px);
+  border: 1px solid rgba(51, 65, 85, 0.3);
+  border-radius: 1rem;
+}
+
+/* Gradient text */
+.glow-text {
+  background: linear-gradient(to right, var(--color-primary-400), var(--color-accent-400));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Range input styling */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 8px;
+  border-radius: 9999px;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--color-primary-500);
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 0 10px rgba(51, 141, 255, 0.4);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--color-primary-500);
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 0 10px rgba(51, 141, 255, 0.4);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-surface-600);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-surface-500);
+}
+
+/* Line clamp */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

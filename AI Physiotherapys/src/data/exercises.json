@@ -1,0 +1,370 @@
+[
+    {
+        "id": "knee-extension",
+        "name": "Seated Knee Extension",
+        "description": "Slowly extend your knee from a seated position until your leg is straight, then lower it back down.",
+        "category": "knee",
+        "environment": "chair",
+        "difficulty": "easy",
+        "targetJoints": [
+            {
+                "name": "Right Knee",
+                "landmarks": [
+                    24,
+                    26,
+                    28
+                ],
+                "side": "right"
+            },
+            {
+                "name": "Left Knee",
+                "landmarks": [
+                    23,
+                    25,
+                    27
+                ],
+                "side": "left"
+            }
+        ],
+        "angleRange": {
+            "min": 90,
+            "max": 170
+        },
+        "defaultReps": 10,
+        "defaultSets": 3,
+        "safetyLimits": {
+            "maxAngle": 180,
+            "minAngle": 60
+        },
+        "holdTime": 2,
+        "instructions": [
+            "Sit upright in a chair with your feet flat on the floor.",
+            "Slowly extend one leg until it is parallel to the ground.",
+            "Hold for 2 seconds, then slowly lower your leg back down.",
+            "Keep your back straight throughout the movement."
+        ],
+        "icon": "🦵"
+    },
+    {
+        "id": "shoulder-flexion",
+        "name": "Shoulder Flexion",
+        "description": "Raise your arm forward and upward as high as comfortable, then slowly lower it.",
+        "category": "shoulder",
+        "environment": "standing",
+        "difficulty": "easy",
+        "targetJoints": [
+            {
+                "name": "Right Shoulder",
+                "landmarks": [
+                    12,
+                    14,
+                    16
+                ],
+                "side": "right"
+            },
+            {
+                "name": "Left Shoulder",
+                "landmarks": [
+                    11,
+                    13,
+                    15
+                ],
+                "side": "left"
+            }
+        ],
+        "angleRange": {
+            "min": 20,
+            "max": 160
+        },
+        "defaultReps": 10,
+        "defaultSets": 3,
+        "safetyLimits": {
+            "maxAngle": 175,
+            "minAngle": 0
+        },
+        "holdTime": 1,
+        "instructions": [
+            "Stand with your arms at your sides.",
+            "Slowly raise one arm forward and upward.",
+            "Go as high as comfortable without arching your back.",
+            "Slowly lower your arm back down."
+        ],
+        "icon": "💪"
+    },
+    {
+        "id": "hip-abduction",
+        "name": "Standing Hip Abduction",
+        "description": "While standing, lift your leg out to the side and slowly bring it back.",
+        "category": "hip",
+        "environment": "standing",
+        "difficulty": "medium",
+        "targetJoints": [
+            {
+                "name": "Right Hip",
+                "landmarks": [
+                    24,
+                    26,
+                    28
+                ],
+                "side": "right"
+            },
+            {
+                "name": "Left Hip",
+                "landmarks": [
+                    23,
+                    25,
+                    27
+                ],
+                "side": "left"
+            }
+        ],
+        "angleRange": {
+            "min": 5,
+            "max": 40
+        },
+        "defaultReps": 10,
+        "defaultSets": 3,
+        "safetyLimits": {
+            "maxAngle": 55,
+            "minAngle": 0
+        },
+        "holdTime": 1,
+        "instructions": [
+            "Stand tall, hold onto a chair or wall for support.",
+            "Slowly raise one leg out to the side.",
+            "Keep your toes pointing forward.",
+            "Hold briefly, then lower back down."
+        ],
+        "icon": "🦿"
+    },
+    {
+        "id": "ankle-pump",
+        "name": "Ankle Pumps",
+        "description": "Point your toes down and then pull them up toward your shin repeatedly.",
+        "category": "ankle",
+        "environment": "bed",
+        "difficulty": "easy",
+        "targetJoints": [
+            {
+                "name": "Right Ankle",
+                "landmarks": [
+                    26,
+                    28,
+                    32
+                ],
+                "side": "right"
+            },
+            {
+                "name": "Left Ankle",
+                "landmarks": [
+                    25,
+                    27,
+                    31
+                ],
+                "side": "left"
+            }
+        ],
+        "angleRange": {
+            "min": 70,
+            "max": 120
+        },
+        "defaultReps": 15,
+        "defaultSets": 3,
+        "safetyLimits": {
+            "maxAngle": 140,
+            "minAngle": 50
+        },
+        "holdTime": 1,
+        "instructions": [
+            "Lie on your back or sit with your legs extended.",
+            "Point your toes away from you (plantar flexion).",
+            "Then pull your toes toward your shin (dorsiflexion).",
+            "Repeat this pumping motion smoothly."
+        ],
+        "icon": "🦶"
+    },
+    {
+        "id": "shoulder-abduction",
+        "name": "Shoulder Abduction",
+        "description": "Raise your arm out to the side and up as high as comfortable.",
+        "category": "shoulder",
+        "environment": "standing",
+        "difficulty": "medium",
+        "targetJoints": [
+            {
+                "name": "Right Shoulder",
+                "landmarks": [
+                    12,
+                    14,
+                    16
+                ],
+                "side": "right"
+            },
+            {
+                "name": "Left Shoulder",
+                "landmarks": [
+                    11,
+                    13,
+                    15
+                ],
+                "side": "left"
+            }
+        ],
+        "angleRange": {
+            "min": 20,
+            "max": 150
+        },
+        "defaultReps": 10,
+        "defaultSets": 3,
+        "safetyLimits": {
+            "maxAngle": 170,
+            "minAngle": 0
+        },
+        "holdTime": 1,
+        "instructions": [
+            "Stand with your arms at your sides.",
+            "Slowly raise one arm out to the side.",
+            "Raise to shoulder height or as high as comfortable.",
+            "Slowly lower back to your side."
+        ],
+        "icon": "🤸"
+    },
+    {
+        "id": "quad-set",
+        "name": "Quad Sets",
+        "description": "Tighten your thigh muscles by pressing the back of your knee into the bed.",
+        "category": "knee",
+        "environment": "bed",
+        "difficulty": "easy",
+        "targetJoints": [
+            {
+                "name": "Right Knee",
+                "landmarks": [
+                    24,
+                    26,
+                    28
+                ],
+                "side": "right"
+            },
+            {
+                "name": "Left Knee",
+                "landmarks": [
+                    23,
+                    25,
+                    27
+                ],
+                "side": "left"
+            }
+        ],
+        "angleRange": {
+            "min": 160,
+            "max": 180
+        },
+        "defaultReps": 10,
+        "defaultSets": 3,
+        "safetyLimits": {
+            "maxAngle": 185,
+            "minAngle": 140
+        },
+        "holdTime": 5,
+        "instructions": [
+            "Lie on your back with your leg straight.",
+            "Tighten to push the back of your knee into the surface.",
+            "Hold for 5 seconds.",
+            "Relax and repeat."
+        ],
+        "icon": "🏋️"
+    },
+    {
+        "id": "hip-flexion",
+        "name": "Seated Hip Flexion",
+        "description": "Lift your knee toward your chest while seated, then lower it back down.",
+        "category": "hip",
+        "environment": "chair",
+        "difficulty": "easy",
+        "targetJoints": [
+            {
+                "name": "Right Hip",
+                "landmarks": [
+                    12,
+                    24,
+                    26
+                ],
+                "side": "right"
+            },
+            {
+                "name": "Left Hip",
+                "landmarks": [
+                    11,
+                    23,
+                    25
+                ],
+                "side": "left"
+            }
+        ],
+        "angleRange": {
+            "min": 60,
+            "max": 110
+        },
+        "defaultReps": 10,
+        "defaultSets": 3,
+        "safetyLimits": {
+            "maxAngle": 130,
+            "minAngle": 40
+        },
+        "holdTime": 1,
+        "instructions": [
+            "Sit upright with feet flat on the floor.",
+            "Slowly lift one knee toward your chest.",
+            "Hold briefly at the top.",
+            "Lower your foot back to the floor."
+        ],
+        "icon": "🧘"
+    },
+    {
+        "id": "straight-leg-raise",
+        "name": "Straight Leg Raise",
+        "description": "Lying on your back, raise your straight leg to about 45 degrees and lower slowly.",
+        "category": "knee",
+        "environment": "bed",
+        "difficulty": "medium",
+        "targetJoints": [
+            {
+                "name": "Right Hip",
+                "landmarks": [
+                    12,
+                    24,
+                    26
+                ],
+                "side": "right"
+            },
+            {
+                "name": "Left Hip",
+                "landmarks": [
+                    11,
+                    23,
+                    25
+                ],
+                "side": "left"
+            }
+        ],
+        "angleRange": {
+            "min": 10,
+            "max": 50
+        },
+        "defaultReps": 10,
+        "defaultSets": 3,
+        "safetyLimits": {
+            "maxAngle": 65,
+            "minAngle": 0
+        },
+        "holdTime": 3,
+        "instructions": [
+            "Lie on your back with one leg bent and the other straight.",
+            "Tighten your thigh muscles on the straight leg.",
+            "Slowly raise the straight leg to about 45 degrees.",
+            "Hold for 3 seconds, then slowly lower."
+        ],
+        "icon": "🦵"
+    }
+]
