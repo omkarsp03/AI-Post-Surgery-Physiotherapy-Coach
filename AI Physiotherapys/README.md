@@ -1,16 +1,69 @@
-# React + Vite
+🧠 AI Post-Surgery Physiotherapy Coach
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A camera-based AI physiotherapy web application that helps patients perform post-surgery rehabilitation exercises safely using real-time pose estimation and intelligent feedback.
 
-Currently, two official plugins are available:
+This project uses computer vision to analyze body movements, track exercise quality, and generate professional reports — all directly inside the browser.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🚀 Features
 
-## React Compiler
+🎥 Real-Time Pose Detection
+- Camera-based movement tracking
+- MediaPipe / TensorFlow.js pose estimation
+- No video recording or cloud storage
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🏥 Patient Workflow
+- Patient registration (Name, Age, Mobile)
+- Exercise selection via dropdown
+- Difficulty level selection
+- Guided session preparation
 
-## Expanding the ESLint configuration
+🧠 Smart Exercise Intelligence
+- Joint angle calculation
+- Rep counting
+- Speed and control analysis
+- Movement quality scoring
+- Symmetry detection (Left vs Right)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+⚠️ Safety Features
+- Pain-aware adjustment
+- Unsafe movement warnings
+- Compensation detection
+- Safety stop alerts
+
+📊 Progress & Reports
+- Session summary dashboard
+- Range of motion tracking
+- Performance analytics
+- Professional PDF report generation
+- Includes:
+  - Patient details
+  - Exercise & difficulty
+  - Date & time
+  - Session metrics
+
+🔒 Privacy First
+- All processing happens in-browser
+- ❌ No raw video stored
+- Only summary statistics saved locally
+
+🖥️ Tech Stack
+
+Frontend
+- React (Vite)
+- TailwindCSS
+- Framer Motion
+
+AI / Computer Vision
+- MediaPipe Pose (Web)
+- TensorFlow.js (optional)
+
+Logic Layer
+- Custom JavaScript modules
+- Angle calculation
+- Rep detection
+- Safety engine
+
+Storage
+- LocalStorage / IndexedDB
+
+
